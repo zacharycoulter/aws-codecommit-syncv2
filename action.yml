@@ -1,6 +1,6 @@
-name: Sync up to AWS CodeCommit Action
+name: Github to AWS CodeCommit Sync
 description: 'Synchronize from GitHub to CodeCommit via GitHub Actions using IAM credentials.'
-author: 'youyo <1003ni@gmail.com>'
+author: 'tsgit18'
 branding:
   icon: terminal
   color: yellow
