@@ -4,7 +4,7 @@ set -ue
 
 RepositoryName="${INPUT_REPOSITORY_NAME}"
 AwsRegion="${INPUT_AWS_REGION}"
-Branch="${INPUT_BRANCH}
+Branch="${INPUT_BRANCH}"
 CodeCommitUrl="https://git-codecommit.${AwsRegion}.amazonaws.com/v1/repos/${RepositoryName}"
 
 git config --global --add safe.directory /github/workspace
