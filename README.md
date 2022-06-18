@@ -13,10 +13,8 @@ name: sync up to codecommit
 
 on:
   push:
-    tags-ignore:
-      - '*'
     branches:
-      - '*'
+      - 'dev'
 
 jobs:
   sync:
@@ -39,12 +37,14 @@ jobs:
         with:
           repository_name: test_repo
           aws_region: ap-northeast-2
+          branch: dev
 ```
 
 ## Inputs
 
 - `repository_name` **Required** CodeCommit repository name.
 - `aws_region` **Required** Region of the CodeCommit repository.
+- `branch` **Required** branch
 
 ## License
 
