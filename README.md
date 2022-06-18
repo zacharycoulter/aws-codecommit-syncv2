@@ -25,17 +25,17 @@ jobs:
           fetch-depth: 0
 
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v1.0.3
+        uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-access-key-id: ${{ secrets.TEST_AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.TEST_AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
 
       - name: Sync up to CodeCommit
-        uses: tsgit18/sync-up-to-codecommit-action@v1
+        uses: afinkorea/sync-up-to-codecommit-action@v1
         with:
           repository_name: test_repo
-          aws_region: us-east-1
+          aws_region: ap-northeast-2
 ```
 
 ## Inputs
