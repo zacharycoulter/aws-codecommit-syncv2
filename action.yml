@@ -11,6 +11,9 @@ inputs:
   aws_region:
     description: Region of the CodeCommit repository.
     required: true
+  branch:
+    description: branch
+    required: true
 runs:
   using: 'docker'
   image: './Dockerfile'
