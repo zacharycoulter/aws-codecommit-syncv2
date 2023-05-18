@@ -1,4 +1,4 @@
-name: aws-codecommit-sync
+name: aws-codecommit-syncv2
 description: 'Synchronize from GitHub to CodeCommit via GitHub Actions using IAM credentials.'
 author: 'afinkorea'
 branding:
