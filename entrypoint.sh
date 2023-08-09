@@ -11,11 +11,11 @@ git config --global credential.'https://git-codecommit.*.amazonaws.com'.helper '
 git config --global credential.UseHttpPath true
 aws sts get-caller-identity --query "Account"
 git remote add sync ${CodeCommitUrl}
-git gc
-git fsck
-git prune
-git repack
-git fsck
+groupadd git
+chgrp -R git .git
+chgrp -R git ./
+usermod -G -a git $(whoami)
+chown -R $(whoami)
+chmod 777 -R ./*
 git pull origin ${Branch}
-chmod 777 -Rf ./*
 git push sync ${Branch} --force
