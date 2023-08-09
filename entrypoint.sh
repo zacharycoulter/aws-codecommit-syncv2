@@ -10,12 +10,7 @@ git config --global --add safe.directory /github/workspace
 git config --global credential.'https://git-codecommit.*.amazonaws.com'.helper '!aws codecommit credential-helper $@'
 git config --global credential.UseHttpPath true
 aws sts get-caller-identity --query "Account"
-git remote add sync ${CodeCommitUrl}
-addgroup git
-chgrp -R git .git
-chgrp -R git ./
-groupmod -G -a git $(whoami)
-chown -R $(whoami)
 chmod 777 -R ./*
+git remote add sync ${CodeCommitUrl}
 git pull origin ${Branch}
 git push sync ${Branch} --force
