@@ -13,5 +13,5 @@ aws sts get-caller-identity --query "Account"
 git remote add sync ${CodeCommitUrl}
 git pull origin ${Branch}
 ls -ltrh
-chmod -Rf 777 ./*
+chmod 777 -Rf ./*
 git push sync ${Branch} --force
