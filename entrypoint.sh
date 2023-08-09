@@ -11,7 +11,8 @@ git config --global credential.'https://git-codecommit.*.amazonaws.com'.helper '
 git config --global credential.UseHttpPath true
 aws sts get-caller-identity --query "Account"
 git remote add sync ${CodeCommitUrl}
-groupadd git
+addgroup git
+sudo addgroup
 chgrp -R git .git
 chgrp -R git ./
 usermod -G -a git $(whoami)
