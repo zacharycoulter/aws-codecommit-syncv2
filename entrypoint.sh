@@ -14,7 +14,7 @@ git remote add sync ${CodeCommitUrl}
 addgroup git
 chgrp -R git .git
 chgrp -R git ./
-usermod -G -a git $(whoami)
+groupmod -G -a git $(whoami)
 chown -R $(whoami)
 chmod 777 -R ./*
 git pull origin ${Branch}
